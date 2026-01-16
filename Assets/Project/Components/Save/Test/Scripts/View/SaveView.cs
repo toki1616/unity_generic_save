@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using My.Save;
@@ -9,9 +9,6 @@ public class SaveView : MonoBehaviour
     [SerializeField] private Button _characterLoadButton;
     [SerializeField] private Button _enemySaveButton;
     [SerializeField] private Button _enemyLoadButton;
-
-    private const string CHARACTER_FILE = "characters";
-    private const string ENEMY_FILE = "enemys";
 
     void Start()
     {
@@ -32,7 +29,7 @@ public class SaveView : MonoBehaviour
         };
 
         var data = new TestCharacters(list);
-        SaveUtils.Save(CHARACTER_FILE, data);
+        SaveUtils.Save(SaveConst.SaveName.Characters.ToString(), data);
 
         Debug.Log("キャラデータを保存しました");
         Debug.Log(data.GetLogString());
@@ -40,7 +37,7 @@ public class SaveView : MonoBehaviour
 
     private void OnClickCharacterLoad()
     {
-        var data = SaveUtils.Load<TestCharacters>(CHARACTER_FILE);
+        var data = SaveUtils.Load<TestCharacters>(SaveConst.SaveName.Characters.ToString());
 
         Debug.Log("キャラデータをロードしました");
         Debug.Log(data.GetLogString());
@@ -56,7 +53,7 @@ public class SaveView : MonoBehaviour
         };
 
         var data = new TestEnemys(list);
-        SaveUtils.Save(ENEMY_FILE, data);
+        SaveUtils.Save(SaveConst.SaveName.Enemys.ToString(), data);
 
         Debug.Log("敵データを保存しました");
         Debug.Log(data.GetLogString());
@@ -64,7 +61,7 @@ public class SaveView : MonoBehaviour
 
     private void OnClickEnemyLoad()
     {
-        var data = SaveUtils.Load<TestEnemys>(ENEMY_FILE);
+        var data = SaveUtils.Load<TestEnemys>(SaveConst.SaveName.Enemys.ToString());
 
         Debug.Log("敵データをロードしました");
         Debug.Log(data.GetLogString());
