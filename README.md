@@ -1,0 +1,2 @@
+# unity_generic_save
+汎用で使えるClassをJsonに変換して保存するプロジェクト
