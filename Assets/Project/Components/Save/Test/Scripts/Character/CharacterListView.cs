@@ -27,6 +27,9 @@ namespace My.Save
         [SerializeField]
         private Button _saveButton;
 
+        [SerializeField]
+        private Button _loadButton;
+
         //生成したプレハブのスクリプトを保持
         private List<CharacterView> _items = new List<CharacterView>();
 
@@ -35,6 +38,7 @@ namespace My.Save
             _createButton.onClick.AddListener(OnClickCreate);
             _deleteButton.onClick.AddListener(OnClickDelete);
             _saveButton.onClick.AddListener(OnClickSave);
+            _loadButton.onClick.AddListener(OnClickLoad);
 
             //起動時にロードして生成
             LoadAndCreateItems();
@@ -66,8 +70,6 @@ namespace My.Save
 
         private void OnClickSave()
         {
-            Debug.Log("Save");
-
             //UIからTestCharacterを作り直す
             List<TestCharacter> list = new List<TestCharacter>();
 
@@ -81,6 +83,20 @@ namespace My.Save
             SaveUtils.Save("Characters", saveData);
 
             Debug.Log("Saved: " + saveData.GetLogString());
+        }
+
+        private void OnClickLoad()
+        {
+            // 既存の UI を削除
+            foreach (var item in _items)
+            {
+                if (item != null)
+                    Destroy(item.gameObject);
+            }
+            _items.Clear();
+
+            // 再ロード
+            LoadAndCreateItems();
         }
 
         public void CreateItem()

@@ -24,6 +24,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2311957228421683469, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311957228421683469, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311957228421683469, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311957228421683469, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311957228421683469, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2410447440224953188, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -280,6 +300,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5724927491997373185}
   m_SourcePrefab: {fileID: 100100000, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
+--- !u!114 &514128129774639809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4946335401548714869, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
+  m_PrefabInstance: {fileID: 4865687601794828724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &700006238413068761 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5345929915511066733, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
@@ -320,6 +351,7 @@ MonoBehaviour:
   _createButton: {fileID: 1621699519356081537}
   _deleteButton: {fileID: 3826650655170938657}
   _saveButton: {fileID: 700006238413068761}
+  _loadButton: {fileID: 514128129774639809}
 --- !u!114 &1621699519356081537 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6126876842212514869, guid: 4c8d4540ecf4cea4f866cf36c964d448, type: 3}
